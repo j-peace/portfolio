@@ -13,7 +13,7 @@ export function Hero() {
   const featured = projects.filter((p) => p.featured && p.displayMode !== "photo")
 
   return (
-    <section className="relative flex min-h-screen flex-col justify-center overflow-hidden px-6 pb-20 pt-28">
+    <section className="relative overflow-hidden px-6 pb-20 pt-28 md:pb-24 md:pt-32">
       {/* ambient light */}
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute left-1/2 top-0 h-[600px] w-[800px] -translate-x-1/2 rounded-full bg-indigo-600/10 blur-[120px]" />
@@ -122,12 +122,6 @@ export function Hero() {
             ))}
           </div>
         </div>
-      </div>
-
-      {/* scroll hint */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-zinc-600">
-        <span className="text-xs tracking-widest uppercase">scroll</span>
-        <div className="h-8 w-px bg-gradient-to-b from-zinc-600 to-transparent" />
       </div>
     </section>
   )
