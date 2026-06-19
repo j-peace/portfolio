@@ -48,6 +48,7 @@ export interface Project {
     website?: string
   }
   featured?: boolean
+  freelanceOnly?: boolean
 }
 
 export const profile = {
@@ -243,6 +244,7 @@ export const projects: Project[] = [
       text: "#fcd34d",
     },
     displayMode: "screenshot",
+    freelanceOnly: true,
     screenshots: [{ src: qrcodeCasamentoScreenshot, alt: "Painel de convidados — Agape Casamento" }],
   },
 ]

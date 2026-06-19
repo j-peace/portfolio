@@ -9,7 +9,7 @@ import { projects } from "../data/projects"
 
 export default function PortfolioPage() {
   const featured = projects.filter((p) => p.featured)
-  const others = projects.filter((p) => !p.featured)
+  const others = projects.filter((p) => !p.featured && !p.freelanceOnly)
 
   return (
     <div className="grain">
