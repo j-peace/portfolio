@@ -6,6 +6,7 @@ import fullyLeft from "../assets/Fully/l.webp"
 import fullyMid from "../assets/Fully/m.webp"
 import fullyRight from "../assets/Fully/r.webp"
 import interScreenshot from "../assets/Inter/ChatGPT Image Jun 18, 2026, 09_35_02 PM.png"
+import qrcodeCasamentoScreenshot from "../assets/qrcode/WhatsApp Image 2026-06-18 at 22.00.14 (1).jpeg"
 import statusInvestLeft from "../assets/status-invest/l.webp"
 import statusInvestMid from "../assets/status-invest/m.webp"
 import statusInvestRight from "../assets/status-invest/r.webp"
@@ -20,6 +21,7 @@ export {
   fullyMid,
   fullyRight,
   interScreenshot,
+  qrcodeCasamentoScreenshot,
   statusInvestLeft,
   statusInvestMid,
   statusInvestRight,

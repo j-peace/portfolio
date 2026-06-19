@@ -7,6 +7,7 @@ import {
   fullyMid,
   fullyRight,
   interScreenshot,
+  qrcodeCasamentoScreenshot,
   statusInvestLeft,
   statusInvestMid,
   statusInvestRight,
@@ -53,6 +54,8 @@ export const profile = {
   name: "Tiago Paz",
   title: "Senior React Native Engineer",
   email: "tiagopaz.gd@gmail.com",
+  phone: "+55 31 98267-3852",
+  whatsapp: "5531982673852",
   linkedin: "https://linkedin.com/in/tiago-paz-91184b138",
   github: "https://github.com/j-peace",
 }
@@ -220,5 +223,26 @@ export const projects: Project[] = [
     },
     displayMode: "photo",
     screenshots: [{ src: tempConverterPhoto, alt: "Apple Watch — Temp Converter" }],
+  },
+  {
+    id: "qrcode-casamento",
+    name: "Agape — QR Casamento",
+    category: "Eventos",
+    tagline: "Leitura de QR code para casamento.",
+    pitch:
+      "App para controle de convidados em tempo real — leitura de QR na porta, contador de chegadas e painel ao vivo para o casamento.",
+    stats: [
+      { value: "QR Code", label: "check-in" },
+      { value: "Tempo real", label: "convidados" },
+      { value: "Eventos", label: "casamentos" },
+    ],
+    accent: {
+      from: "#d4a574",
+      to: "#92400e",
+      glow: "rgba(212, 165, 116, 0.35)",
+      text: "#fcd34d",
+    },
+    displayMode: "screenshot",
+    screenshots: [{ src: qrcodeCasamentoScreenshot, alt: "Painel de convidados — Agape Casamento" }],
   },
 ]

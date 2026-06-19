@@ -1,31 +1,16 @@
-import { Header } from "./components/Header"
-import { Hero } from "./components/Hero"
-import { AppNav } from "./components/AppNav"
-import { ProjectShowcase } from "./components/ProjectShowcase"
-import { MoreProjects } from "./components/MoreProjects"
-import { Contact } from "./components/Contact"
-import { Footer } from "./components/Footer"
-import { projects } from "./data/projects"
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+import PortfolioPage from "./pages/PortfolioPage"
+import AppsSobMedidaPage from "./pages/AppsSobMedidaPage"
 
-function App() {
-  const featured = projects.filter((p) => p.featured)
-  const others = projects.filter((p) => !p.featured)
+const basename = import.meta.env.BASE_URL.replace(/\/$/, "")
 
+export default function App() {
   return (
-    <div className="grain">
-      <Header />
-      <main>
-        <Hero />
-        <AppNav />
-        {featured.map((project, i) => (
-          <ProjectShowcase key={project.id} project={project} index={i} />
-        ))}
-        <MoreProjects projects={others} />
-        <Contact />
-      </main>
-      <Footer />
-    </div>
+    <BrowserRouter basename={basename || undefined}>
+      <Routes>
+        <Route path="/" element={<PortfolioPage />} />
+        <Route path="/apps-sob-medida" element={<AppsSobMedidaPage />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
-
-export default App
