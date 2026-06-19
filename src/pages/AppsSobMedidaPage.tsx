@@ -1,31 +1,23 @@
 import { FreelanceHeader } from "../components/freelance/FreelanceHeader"
 import { FreelanceHero } from "../components/freelance/FreelanceHero"
-import { FreeConsultationSection } from "../components/freelance/FreeConsultationSection"
-import { PackagesSection } from "../components/freelance/PackagesSection"
-import { ProcessSection } from "../components/freelance/ProcessSection"
-import { UseCasesSection } from "../components/freelance/UseCasesSection"
-import { FreelancePortfolio } from "../components/freelance/FreelancePortfolio"
+import { SolutionsSection } from "../components/freelance/SolutionsSection"
+import { BenefitsSection } from "../components/freelance/BenefitsSection"
+import { ResultsSection } from "../components/freelance/ResultsSection"
+import { AboutTiagoSection } from "../components/freelance/AboutTiagoSection"
+import { DiagnosticSection } from "../components/freelance/DiagnosticSection"
 import { FreelanceContact, FreelanceFooter } from "../components/freelance/FreelanceContact"
-import { freelancePortfolioRows } from "../data/freelance"
-import { projects } from "../data/projects"
 
 export default function AppsSobMedidaPage() {
-  const portfolioRows = freelancePortfolioRows.map((row) =>
-    row
-      .map((id) => projects.find((p) => p.id === id))
-      .filter((p): p is NonNullable<typeof p> => p !== undefined)
-  )
-
   return (
-    <div className="grain">
+    <div className="grain min-h-screen bg-[#0a0f1d] text-slate-200">
       <FreelanceHeader />
       <main>
         <FreelanceHero />
-        <FreeConsultationSection />
-        <PackagesSection />
-        <ProcessSection />
-        <UseCasesSection />
-        <FreelancePortfolio rows={portfolioRows} />
+        <SolutionsSection />
+        <BenefitsSection />
+        <ResultsSection />
+        <AboutTiagoSection />
+        <DiagnosticSection />
         <FreelanceContact />
       </main>
       <FreelanceFooter />
